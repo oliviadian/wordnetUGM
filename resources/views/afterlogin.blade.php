@@ -3,17 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+
+         <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
-        <title>Wordnet</title>
+        <title>{{ config('app.name', 'Wordnet') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
         <!-- Styles -->
         <style>
@@ -354,45 +361,46 @@
 
     <header>
 
-        <div>
+<div>
 
-            <ul>
-                <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
-                <li class="teks">Wordnet UGM</li>
-                <li><a href="/SeputarLaman">Seputar Laman</a></li>
-                <li><a href="/Pencarian">Pencarian</a></li>
-                <li><a href="/Kedalaman/login">Kedalaman Kata</a></li>
+    <ul>
+        <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
+        <li class="teks">Wordnet UGM</li>
+        <li><a href="/SeputarLaman">Seputar Laman</a></li>
+        <li><a href="/Pencarian">Pencarian</a></li>
+        <li><a href="/Kedalaman/login">Kedalaman Kata</a></li>
 
-            <div class="right">
-                <li>
-                <a href="/">Keluar</a></li>
-            </div>
+    <div class="right">
+        <li>
+        <a href="/logout">Keluar</a></li>
+    </div>
 
-            </ul>
+    </ul>
 
+</div>
+
+</header>
+
+
+<div class="flex-center position-ref full-max-height">
+    @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+                <a href="{{ url('/home') }}"></a>
+            @else
+                <a href="{{ route('login') }}">Login</a>
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}">Register</a>
+                @endif     
+            @endauth
         </div>
         
-    </header>
-    
-        <div class="flex-center position-ref full-max-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}"></a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+    @endif
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+    @yield('content')
 
-            @yield('content')
-
-        </div>
-
+</div>
         <footer>
             <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
         </footer>

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
+use Session;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,5 +30,11 @@ class HomeController extends Controller
     public function adminHome()
     {
         return view('adminHome');
+    }
+
+    public function logout(){
+        Auth::logout();
+        Session::flush();
+        return redirect('home');
     }
 }
