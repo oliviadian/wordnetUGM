@@ -6,11 +6,12 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="{{ asset('js/app.js') }}" defer></script>
 
         <title>Wordnet</title>
 
@@ -108,6 +109,37 @@
                 background-color: #5DADE2;
                 color: white;
                 text-decoration: none;
+            }
+
+            li {
+                display: block;
+                transition-duration: 0.5s;
+            }
+
+            li:hover {
+                cursor: pointer;
+            }
+
+            ul li ul {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                transition: all 0.5s ease;
+                margin-top: 1rem;
+                left: 0;
+                display: none;
+            }
+
+            ul li:hover > ul,
+            ul li ul:hover {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+            }
+
+            ul li ul li {
+                clear: both;
+                width: 100%;
             }
 
             .w {
@@ -262,17 +294,34 @@
                 padding-left: 17%;
             }
 
-            /* @media screen and (max-width:1200px){
-                .title {
-                    font-size: 84px;
-                }
-
-                .logo{
-                    max-width:200px; 
-                    max-height:200px;
-                } */
-
+            .pencarian{
+                color: #ffff;
+                font-family: initial;
+                font-weight: lighter;
             }
+
+            /* .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #ffff;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            } */
 
         </style>
     </head>
@@ -287,16 +336,8 @@
                     <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
                     <li class="teks">Wordnet UGM</li>
                     <li><a href="/SeputarLaman">Seputar Laman</a></li>
-                    <li><a href="/usersearch">Pencarian</a></li>
-
-                <!-- <div class="right">
-                    <li><a href="/Login">Login</a></li>
-                </div>
-
-                <div class="right">
-                    <li><a href="/Daftar">Daftar</a></li>
-                </div> -->
-                
+                    <li><a href="/usersearch">Pencarian</li>
+                   
                 @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -311,7 +352,6 @@
                 </div>
             @endif
                 </ul>
-
             </div>
             
         </header>

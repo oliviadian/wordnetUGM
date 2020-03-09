@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKataNounTable extends Migration
+class CreateKataNounsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateKataNounTable extends Migration
      */
     public function up()
     {
-        Schema::create('kata_noun', function (Blueprint $table) {
+        Schema::create('kata_nouns', function (Blueprint $table) {
             $table->bigIncrements('id_kata_n');
             $table->bigInteger('id_hipernim_n')->unsigned();
             $table->string('kata_dasar_n');

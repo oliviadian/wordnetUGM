@@ -9,6 +9,7 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
      
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
 
-        <title>{{ config('app.name', 'Wordnet') }}</title>
+        <title>Wordnet</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -367,7 +368,7 @@
         <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
         <li class="teks">Wordnet UGM</li>
         <li><a href="/SeputarLaman">Seputar Laman</a></li>
-        <li><a href="/Pencarian">Pencarian</a></li>
+        <li><a href="/usersearch">Pencarian</a></li>
         <li><a href="/Kedalaman/login">Kedalaman Kata</a></li>
 
     <div class="right">

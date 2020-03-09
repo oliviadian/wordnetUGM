@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTambahKataVTable extends Migration
+class CreateTambahKataVerbsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTambahKataVTable extends Migration
      */
     public function up()
     {
-        Schema::create('tambah_kata_v', function (Blueprint $table) {
+        Schema::create('tambah_kata_verbs', function (Blueprint $table) {
             $table->bigIncrements('id_tambah_kata_v');
             $table->string('isi');
             $table->timestamps();

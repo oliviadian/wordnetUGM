@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('afterlogin')
 @section('content')
 
 <div class="cari">

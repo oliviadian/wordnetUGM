@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHipernimNounTable extends Migration
+class CreateHipernimNounsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateHipernimNounTable extends Migration
      */
     public function up()
     {
-        Schema::create('hipernim_noun', function (Blueprint $table) {
+        Schema::create('hipernim_nouns', function (Blueprint $table) {
             $table->bigIncrements('id_hipernim_n');
             $table->integer('id_jarak_n')->unsigned();
             $table->string('hipernim_n');
