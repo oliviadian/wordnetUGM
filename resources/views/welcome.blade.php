@@ -10,7 +10,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <title>Wordnet</title>
@@ -83,16 +83,16 @@
                 font-weight: 100;
             }
 
-           ul {
+           /* ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
                 background-color: #1A2C43;
                 min-width: 100%;
-            }
+            } */
 
-            li {
+            /* li {
                 float: left;
                 margin-left:2%;
             }
@@ -140,7 +140,7 @@
             ul li ul li {
                 clear: both;
                 width: 100%;
-            }
+            } */
 
             .w {
                 max-width:50px; 
@@ -158,7 +158,7 @@
 
             footer{
                 font-family: "Times New Roman", Times, serif;
-                background-color: #1A2C43;
+                /* background-color: #1A2C43; */
                 color: white;
                 font-size: 12px;
                 padding: 4px;
@@ -328,7 +328,7 @@
 
     <body>
 
-        <header>
+        <!-- <header>
 
             <div>
 
@@ -336,25 +336,79 @@
                     <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
                     <li class="teks">Wordnet UGM</li>
                     <li><a href="/SeputarLaman">Seputar Laman</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pencarian
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Kata Benda</a>
+                            <a class="dropdown-item" href="#">Kata Kerja</a>
+                        </div>
+                    </li>
                     <li><a href="/usersearch">Pencarian</li>
                    
-                @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+                
+                    @if (Route::has('login'))
+                    <div class="top-right links">
+                        @auth
+                            <a href="{{ url('/home') }}">Home</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                    @endif
                 </ul>
             </div>
             
-        </header>
+        </header> -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A2C43;">
+            <!-- <a class="navbar-brand" href="/">Wordnet</a> -->
+            <a class="navbar-brand" href="/" style="font-family: Times New Roman">
+                <img src="https://ugm.ac.id/images/optimasi/ugm_header.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Wordnet UGM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/SeputarLaman">Seputar Laman</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pencarian
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/usersearch">Kata Benda</a>
+                        <a class="dropdown-item" href="#">Kata Kerja</a>
+                    </li>
+
+                    @if (Route::has('login'))
+                    <div class="top-right links">
+                        @auth
+                            <a href="{{ url('/home') }}">Home</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                    @endif
+                </ul>
+                
+            </div>
+        </nav>
 
         <div class="flex-center position-ref full-height">
             @yield('content')

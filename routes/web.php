@@ -14,12 +14,12 @@ Route::get('/SeputarLaman', function () {
 //     return view('pencarian');
 // });
 
+Route::get('/home', 'HomeController@index')->name('seputarlaman-al');
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('admin');
+
 Route::get('/Kedalaman/login', function () {
     return view('kedalamankata-al');
 });
-
-Route::get('/home', 'HomeController@index')->name('seputarlaman-al');
-Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('admin');
 
 Route::get('logout', 'HomeController@logout')->name('logout');
 

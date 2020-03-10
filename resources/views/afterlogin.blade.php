@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
-
-         <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<!-- 
+         CSRF Token
+        <meta name="csrf-token" content="{{ csrf_token() }}"> -->
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
         <script src="{{ asset('js/app.js') }}" defer></script>
 
         <title>Wordnet</title>
@@ -47,7 +47,7 @@
                 justify-content: center;
                 justify-items: center;
                 margin-bottom: 20px;
-                padding-top: 10%;
+                padding-top: 15%;
                 padding-bottom: 15%
             }
 
@@ -57,7 +57,7 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
+                right: 30px;
                 top: 18px;
             }
 
@@ -86,7 +86,7 @@
                 font-weight: 100;
             }
 
-           ul {
+           /* ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
@@ -112,7 +112,7 @@
                 background-color: #5DADE2;
                 color: white;
                 text-decoration: none;
-            }
+            } */
 
             .w {
                 max-width:50px; 
@@ -130,7 +130,7 @@
 
             footer{
                 font-family: "Times New Roman", Times, serif;
-                background-color: #1A2C43;
+                /* background-color: #1A2C43; */
                 color: white;
                 font-size: 12px;
                 padding: 4px;
@@ -360,7 +360,7 @@
 
     <body>
 
-    <header>
+    <!-- <header>
 
 <div>
 
@@ -380,28 +380,70 @@
 
 </div>
 
-</header>
+</header>  -->
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A2C43;">
+           
+            <a class="navbar-brand" href="/" style="font-family: Times New Roman">
+                <img src="https://ugm.ac.id/images/optimasi/ugm_header.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Wordnet UGM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/SeputarLaman">Seputar Laman</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pencarian
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/usersearch">Kata Benda</a>
+                        <a class="dropdown-item" href="#">Kata Kerja</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Kedalaman/login">Kedalaman Kata</a>
+                    </li>
+
+               
+                    <li class="nav-item">
+                        <a class="top-right links" href="/logout">Keluar</a>
+                    </li>
+               
+                </ul>    
+            </div>
+        </nav>
 
 
-<div class="flex-center position-ref full-max-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}"></a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
+        <div class="flex-center position-ref full-max-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}"></a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif     
-            @endauth
-        </div>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif     
+                    @endauth
+                </div>
+                
+            @endif
+
+            <div class="flex-center position-ref full-height">
+                @yield('content')
+            </div>
         
-    @endif
+        </div>
 
-    @yield('content')
-
-</div>
         <footer>
             <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
         </footer>
