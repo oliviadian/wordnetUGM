@@ -29,6 +29,24 @@ Route::get('/usersearch', function () {
 
 Route::get('/usersearch', 'nounController@search')->name('carikata');
 
+Route::get('/pencarian/verb', function () {
+    return view('pencarian-verb');
+});
+
+Route::get('/pencarian/verb', 'verbController@searchverb')->name('carikata');
+
+Route::get('/pencarian/noun/al', function () {
+    return view('pencarian-noun-al');
+});
+
+Route::get('/pencarian/noun/al', 'nounAlController@searchnounal')->name('carikata');
+
+Route::get('/pencarian/verb/al', function () {
+    return view('pencarian-verb-al');
+});
+
+Route::get('/pencarian/verb/al', 'verbAlController@searchverbal')->name('carikata');
+
 Auth::routes();
 
 

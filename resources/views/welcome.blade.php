@@ -184,6 +184,7 @@
                 font-family: "Times New Roman", Times, serif;
                 color: black;
                 font-size: 15px;
+                box-shadow: 10px 10px #888888;
             }
 
             .log-box{
@@ -389,7 +390,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/usersearch">Kata Benda</a>
-                        <a class="dropdown-item" href="#">Kata Kerja</a>
+                        <a class="dropdown-item" href="/pencarian/verb">Kata Kerja</a>
                     </li>
 
                     @if (Route::has('login'))
@@ -417,5 +418,6 @@
         <footer>
             <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
         </footer>
+
     </body>
 </html>

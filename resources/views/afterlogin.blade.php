@@ -27,18 +27,19 @@
         <style>
             html, body {
                 background-color: #fff;
-                background-image: url('./images/ugm.jpg');
+                background-image: url(./images/ugm.jpg);
                 background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
+                height: 100%;
                 margin: 0;
             }
 
             .full-max-height {
-                width: 1200px;
-                height: 550px;
+                height: 84vh;
             }
 
             .flex-center {
@@ -47,7 +48,7 @@
                 justify-content: center;
                 justify-items: center;
                 margin-bottom: 20px;
-                padding-top: 15%;
+                padding-top: 10%;
                 padding-bottom: 15%
             }
 
@@ -57,7 +58,7 @@
 
             .top-right {
                 position: absolute;
-                right: 30px;
+                right: 10px;
                 top: 18px;
             }
 
@@ -147,21 +148,23 @@
             }
 
             .box-sl {
-                max-width: 90%; 
-                padding: 3%;
+                max-width: 80%;
+                max-height: 68%;
+                padding: 1%;
                 border: 1px #1A2C43;
-                margin: 2%;
+                margin: 0;
                 background-color: #F1F1F1;
                 font-family: "Times New Roman", Times, serif;
                 color: black;
                 font-size: 15px;
                 margin-left: 5%;
                 margin-top: 1%;
+                box-shadow: 10px 10px #888888;
             }
 
             .log-box{
-                max-width: 350px;
-                max-height: 280px;
+                min-width: 350px;
+                min-height: 280px;
                 padding-top: 25px;
                 padding-left: 30px;
                 border: 2px #5DADE2;
@@ -404,8 +407,8 @@
                         Pencarian
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/usersearch">Kata Benda</a>
-                        <a class="dropdown-item" href="#">Kata Kerja</a>
+                        <a class="dropdown-item" href="/pencarian/noun/al">Kata Benda</a>
+                        <a class="dropdown-item" href="/pencarian/verb/al">Kata Kerja</a>
                     </li>
 
                     <li class="nav-item">
@@ -420,23 +423,6 @@
                 </ul>    
             </div>
         </nav>
-
-
-        <div class="flex-center position-ref full-max-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}"></a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif     
-                    @endauth
-                </div>
-                
-            @endif
 
             <div class="flex-center position-ref full-height">
                 @yield('content')
