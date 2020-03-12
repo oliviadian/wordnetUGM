@@ -10,6 +10,10 @@ Route::get('/SeputarLaman', function () {
     return view('seputarlaman');
 });
 
+Route::get('/SeputarLaman/Al', function () {
+    return view('seputarlaman-al');
+});
+
 // Route::get('/Pencarian', function () {
 //     return view('pencarian');
 // });
@@ -29,9 +33,9 @@ Route::get('/usersearch', function () {
 
 Route::get('/usersearch', 'nounController@search')->name('carikata');
 
-Route::get('/pencarian/verb', function () {
-    return view('pencarian-verb');
-});
+// Route::get('/pencarian/verb', function () {
+//     return view('pencarian-verb');
+// });
 
 Route::get('/pencarian/verb', 'verbController@searchverb')->name('carikata');
 

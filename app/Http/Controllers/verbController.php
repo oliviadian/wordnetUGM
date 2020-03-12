@@ -7,6 +7,10 @@ use App\kata_verb;
 
 class verbController extends Controller
 {
+    public function index(){
+        return view('pencarian-verb');
+    }
+
     public function searchverb(Request $request)
     {
         $kata = $request->input('searchverb');

@@ -22,7 +22,8 @@
         <style>
             html, body {
                 background-color: #fff;
-                background-image: url(./images/ugm.jpg);
+                /* background-image: url(./images/ugm.jpg); */
+                background-image: url({{ asset('images/ugm.jpg') }});
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -396,7 +397,7 @@
                     @if (Route::has('login'))
                     <div class="top-right links">
                         @auth
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a href="{{ url('/SeputarLaman/Al') }}">Home</a>
                         @else
                             <a href="{{ route('login') }}">Login</a>
 

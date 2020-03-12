@@ -27,7 +27,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                background-image: url(./images/ugm.jpg);
+                background-image: url({{ asset('images/ugm.jpg') }});
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -399,7 +399,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/SeputarLaman">Seputar Laman</a>
+                        <a class="nav-link" href="/SeputarLaman/Al">Seputar Laman</a>
                     </li>
 
                     <li class="nav-item dropdown">
