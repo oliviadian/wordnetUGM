@@ -12,19 +12,10 @@ class nounAlController extends Controller
 {
     public function searchnounal(Request $request)
     {
-        // $kata = kata_noun ::all();
-
-        // return view('pencarian-noun-al', ['kata_noun' => $kata]);
-        $kata = $request->input('searchnounal');
-
-        if($kata){
-            $noun = kata_noun::where('kata_dasar_n', 'LIKE', '%' . $kata . '%')
-                            ->get();
-            if(count($noun) >0){
-                return view('pencarian-noun-al')->withDetails($noun)->withQuery($kata);
-            }
-        }
-        return view('pencarian')->withMessage("no data found");
+        $kata = kata_noun::with('hipernim')->where('kata_dasar_n', $request->searchnounal)->get();
+        // dd($kata);
+        return view('pencarian-noun-al', compact ('kata'));
+       
     }
     
 }
