@@ -3,7 +3,7 @@
 
 <div>
     <div class="teks2">
-        <h3> <b> Seputar Laman </b></h3>
+         <b> Seputar Laman </b>
     </div>
 
     <div class="box-sl">

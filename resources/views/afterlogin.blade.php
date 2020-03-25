@@ -2,7 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+        <!-- <meta name="viewport" content="max-width=device-max-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 
          CSRF Token
         <meta name="csrf-token" content="{{ csrf_token() }}"> -->
@@ -44,7 +45,7 @@
 
             .flex-center {
                 align-items: center;
-                display: flex;
+                display: contents;
                 justify-content: center;
                 justify-items: center;
                 margin-bottom: 20px;
@@ -129,17 +130,19 @@
                 margin-left:0.01%;
             }
 
-            footer{
+            footer {
+                padding-top: 5%;
                 font-family: "Times New Roman", Times, serif;
                 /* background-color: #1A2C43; */
                 color: white;
                 font-size: 12px;
-                padding: 4px;
+                /* padding: 4px; */
+                padding-top: 6%;
             }
 
             .tab{
                 padding-left: 6px;
-                padding-top: 8px;
+                padding-top: 95px;
             }
 
             .logo{
@@ -176,10 +179,13 @@
                 border-radius: 15px;
             }
             
-            .cari{
-                padding: 20px;
-                min-width: 50%;
-                margin-bottom: 200px;
+            .cari {
+                padding: 45px;
+                max-width: 50%;
+                margin-bottom: 20px;
+                margin-top: 120px;
+                margin-left: 320px;
+                display: ;
             }
 
             form.search input[type=text] {
@@ -187,7 +193,7 @@
                 font-size: 14px;
                 border: 1px solid grey;
                 float: left;
-                width: 70%;
+                width: 80%;
                 background: #f1f1f1;
                 border-top-left-radius: 25px;
                 border-bottom-left-radius: 25px;
@@ -265,9 +271,9 @@
             .position{
                 color: #ffff;
                 font-family: "Times New Roman", Times, serif;
-                font-size: 50px;
-                padding: 4%;
-                padding-left: 17%;
+                font-size: x-large;
+                /* padding: 4%;
+                padding-left: 17%; */
             }
 
             .vl {
@@ -279,35 +285,36 @@
             }
 
             .teks2{
-                color: #000000;
                 font-family: "Times New Roman", Times, serif;
+                font-weight: 300;
+                margin: 10px 0;
+                color: #fff;
                 margin-left: 5%;
                 padding-top: 2%;
+                font-size: x-large;
             }
 
-            .box-kk{
-                width: 125%;
-                height: 50%;
-                padding: auto;
-                padding-top: 10%;
-                padding-bottom: 10%;
-                padding-left: 12%;
-                padding-right: 12%;
+            .box-kk {
+                width: 28%;
+                height: 10%;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                padding-left: 3%;
+                padding-right: 5%;
                 border: 1px #1A2C43;
-                margin: auto;
-                background-color: #F1F1F1;
+                background-color: #ececec;
                 border-color: #004A74;
                 font-family: "Times New Roman", Times, serif;
                 color: black;
                 font-size: 15px;
-                /* margin-left: 2%;
-                margin-top: 2%; */
+                margin-left: 5%;
+                margin-bottom: 4%;
             }
 
             .input-kk{
                 padding: 4px;
                 border-radius: 5px;
-                border-color: #004A74;
+                border-color: #b8c6ce;
                 max-width: 300px;
             }
             

@@ -3,13 +3,12 @@
 
 <div class="cari">
 
-      <img class="img-pos" src="https://ugm.ac.id/images/optimasi/ugm_header.png">
-      <h2 class="position">Wordnet UGM</h2>
+      <h2 class="position">Pencarian Noun</h2>
        
   <form class="search" action="{{ action('nounAlController@searchnounal') }}" method="GET">
 
       <input type="text" placeholder="Search.." name="searchnounal">
-      <button><i class="fa fa-search"><a href="/pencarian/noun/al"></a></i></button>
+      <button type="submit"><i class="fa fa-search"></i></button>
     
   </form>
 
@@ -25,14 +24,16 @@
             <td> {{ $noun->makna_dasar_n}} </td> </br>
 
          
-              @foreach($noun->hipernim as $hipernim)
+          @foreach($noun->hipernim as $hipernim)
+
             <td>{{$hipernim->hipernim_n}} </td></br>
             <td>{{$hipernim->makna_hipernim_n}} </td>
 
-              @endforeach
+          @endforeach
            
         </tr>
-        @endforeach
+        
+    @endforeach
                    
         </div>
   </div>

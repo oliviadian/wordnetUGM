@@ -18,7 +18,7 @@ Route::get('/SeputarLaman/Al', function () {
 //     return view('pencarian');
 // });
 
-Route::get('/home', 'HomeController@index')->name('seputarlaman-al');
+Route::get('/SeputarLaman/Al', 'HomeController@index')->name('seputarlaman-al');
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('admin');
 
 Route::get('/Kedalaman/login', function () {

@@ -3,7 +3,7 @@
 
 <div>
     <div class="teks2">
-        <h3> <b> Kedalaman Kata </b></h3>
+        <b> Kedalaman Kata </b>
     </div>
 
     <div class="box-kk">
