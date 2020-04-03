@@ -38,7 +38,17 @@
         
         </div>
   </div>
-  
+
+  <div>
+      <h6 class="comment">Tambahkan komentar</h6>
+
+      <form action="{{ action('tambahKatavController@isi') }}" method="POST">
+        @csrf
+        <textarea id="isi" rows="4" cols="50" placeholder="Masukkan komentar atau masukan" name="isi"> </textarea>
+        <button type="submit" class="btn btn-primary">Tambahkan</button>
+      </form> 
+  </div>   
+
   @endif
 
 </div>

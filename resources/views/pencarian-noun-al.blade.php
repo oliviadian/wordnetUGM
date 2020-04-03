@@ -14,7 +14,7 @@
 
   @if ($kata)
 
-    <h5 class="pencarian"><b>Hasil pencarian : </b></h5>
+    <h6 class="comment">Hasil pencarian : </h6>
 
   <div class="card">
     <div class="card-body">
@@ -32,11 +32,24 @@
           @endforeach
            
         </tr>
-        
+
     @endforeach
                    
         </div>
   </div>
+
+  </br>
+
+  <div>
+      <h6 class="comment">Tambahkan komentar</h6>
+
+      <form action="{{ action('tambahKatanController@isi') }}" method="POST">
+        @csrf
+        <textarea id="isi" rows="4" cols="50" placeholder="Masukkan komentar atau masukan" name="isi"> </textarea>
+        <button type="submit" class="btn btn-primary">Tambahkan</button>
+      </form> 
+  </div>   
+  
   @endif
             
 

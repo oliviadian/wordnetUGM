@@ -365,6 +365,9 @@
                 padding-top: 7%;
             }
            
+            .comment{
+                color: #ffff;
+            }
         </style>
     </head>
 

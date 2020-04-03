@@ -51,6 +51,9 @@ Route::get('/pencarian/verb/al', function () {
 
 Route::get('/pencarian/verb/al', 'verbAlController@searchverbal')->name('carikata');
 
+Route::post('/pencarian/noun/al', 'tambahKatanController@isi')->name('isi');
+Route::post('/pencarian/verb/al', 'tambahKatavController@isi')->name('isi');
+
 Auth::routes();
 
 
