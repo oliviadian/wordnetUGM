@@ -19,7 +19,11 @@ Route::get('/SeputarLaman/Al', function () {
 // });
 
 Route::get('/SeputarLaman/Al', 'HomeController@index')->name('seputarlaman-al');
-Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('admin');
+Route::get('/admin/home', 'HomeController@adminHomeN')->name('adminHome')->middleware('admin');
+Route::get('/admin/home', 'HomeController@adminHomeV')->name('adminHome')->middleware('admin');
+
+// Route::get('/admin/home', 'halamanAdminController@lihatdata')->name('adminHome')->middleware('admin');
+
 
 Route::get('/Kedalaman/login', function () {
     return view('kedalamankata-al');

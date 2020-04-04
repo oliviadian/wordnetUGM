@@ -367,6 +367,34 @@
            
             .comment{
                 color: #ffff;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            table {
+                /* font-family: arial, sans-serif; */
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th{
+                color: #ffff;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            .tabelpost{
+                width:80%;
+                margin-left: 5%;
+                margin-bottom: 15%;
+                margin-top: 5%;
             }
         </style>
     </head>

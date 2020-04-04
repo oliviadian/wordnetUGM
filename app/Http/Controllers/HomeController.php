@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Auth;
 use Session;
 use Illuminate\Http\Request;
+use App\tambah_kata_n;
+use App\tambah_kata_v;
 
 class HomeController extends Controller
 {
@@ -27,9 +29,16 @@ class HomeController extends Controller
         return view('seputarlaman-al');
     }
 
-    public function adminHome()
+    public function adminHomeN()
     {
-        return view('adminHome');
+        $datanoun = tambah_kata_n::all(); 
+        return view('adminHome', ['hasilnoun'=>$datanoun]);
+    }
+
+    public function adminHomeV()
+    {
+        $dataverb = tambah_kata_v::all(); 
+        return view('adminHome', ['hasilverb'=>$dataverb]);
     }
 
     public function logout(){
