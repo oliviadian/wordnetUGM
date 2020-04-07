@@ -29,21 +29,26 @@ class HomeController extends Controller
         return view('seputarlaman-al');
     }
 
+    public function admin()
+    {
+        return view('adminHome');
+    }
+
     public function adminHomeN()
     {
         $datanoun = tambah_kata_n::all(); 
-        return view('adminHome', ['hasilnoun'=>$datanoun]);
+        return view('adminNoun', ['hasilnoun'=>$datanoun]);
     }
 
     public function adminHomeV()
     {
         $dataverb = tambah_kata_v::all(); 
-        return view('adminHome', ['hasilverb'=>$dataverb]);
+        return view('adminVerb', ['hasilverb'=>$dataverb]);
     }
 
     public function logout(){
         Auth::logout();
         Session::flush();
-        return redirect('home');
+        return redirect('landingpage');
     }
 }

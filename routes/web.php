@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get('/landingpage', function () {
+    return view('landingpage');
+});
+
 Route::get('/SeputarLaman', function () {
     return view('seputarlaman');
 });
@@ -14,13 +18,23 @@ Route::get('/SeputarLaman/Al', function () {
     return view('seputarlaman-al');
 });
 
-// Route::get('/Pencarian', function () {
-//     return view('pencarian');
-// });
+Route::get('/admin/home', function () {
+    return view('adminHome');
+});
+
+Route::get('/admin/home/noun', function () {
+    return view('adminNoun');
+});
+
+Route::get('/admin/home/verb', function () {
+    return view('adminVerb');
+});
 
 Route::get('/SeputarLaman/Al', 'HomeController@index')->name('seputarlaman-al');
-Route::get('/admin/home', 'HomeController@adminHomeN')->name('adminHome')->middleware('admin');
-Route::get('/admin/home', 'HomeController@adminHomeV')->name('adminHome')->middleware('admin');
+
+Route::get('/admin/home', 'HomeController@admin')->name('adminHome')->middleware('admin');
+Route::get('/admin/home/noun', 'HomeController@adminHomeN')->name('adminNoun')->middleware('admin');
+Route::get('/admin/home/verb', 'HomeController@adminHomeV')->name('adminVerb')->middleware('admin');
 
 // Route::get('/admin/home', 'halamanAdminController@lihatdata')->name('adminHome')->middleware('admin');
 
@@ -29,7 +43,11 @@ Route::get('/Kedalaman/login', function () {
     return view('kedalamankata-al');
 });
 
-Route::get('logout', 'HomeController@logout')->name('logout');
+Route::get('/logout', function () {
+    return view('landingpage');
+});
+
+Route::get('/logout', 'HomeController@logout')->name('logout');
 
 Route::get('/usersearch', function () {
     return view('pencarian');

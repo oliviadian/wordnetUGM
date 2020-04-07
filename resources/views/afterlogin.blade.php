@@ -401,28 +401,6 @@
 
     <body>
 
-    <!-- <header>
-
-<div>
-
-    <ul>
-        <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
-        <li class="teks">Wordnet UGM</li>
-        <li><a href="/SeputarLaman">Seputar Laman</a></li>
-        <li><a href="/usersearch">Pencarian</a></li>
-        <li><a href="/Kedalaman/login">Kedalaman Kata</a></li>
-
-    <div class="right">
-        <li>
-        <a href="/logout">Keluar</a></li>
-    </div>
-
-    </ul>
-
-</div>
-
-</header>  -->
-
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A2C43;">
            
             <a class="navbar-brand" href="/" style="font-family: Times New Roman">
