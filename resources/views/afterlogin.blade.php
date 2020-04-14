@@ -151,7 +151,7 @@
             }
 
             .box-sl {
-                max-width: 80%;
+                max-width: 89%;
                 max-height: 68%;
                 padding: 1%;
                 border: 1px #1A2C43;
@@ -180,12 +180,10 @@
             }
             
             .cari {
-                padding: 45px;
+                padding: 5%;
                 max-width: 50%;
-                margin-bottom: 20px;
-                margin-top: 120px;
-                margin-left: 320px;
-                display: ;
+                margin-top: 5%;
+                margin-left: 25%;
             }
 
             form.search input[type=text] {
@@ -433,7 +431,7 @@
 
                
                     <li class="nav-item">
-                        <a class="top-right links" href="/logout">Keluar</a>
+                        <a class="top-right links" href="/logout" style="text-decoration:none">Keluar</a>
                     </li>
                
                 </ul>    
@@ -446,9 +444,11 @@
         
         </div>
 
-        <footer>
-            <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
-        </footer>
+        <footer> 
+            <div class="container">
+                <p class="copyright"> © 2020 UNIVERSITAS GADJAH MADA</p>
+            </div>
+	    </footer>
         
     </body>
 </html>

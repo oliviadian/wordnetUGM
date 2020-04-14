@@ -9,7 +9,7 @@
   <form class="search" action="{{ action('nounController@search') }}" method="GET">
 
       <input type="text" placeholder="Search.." name="search">
-      <button><i class="fa fa-search"><a href="/usersearch"></a></i></button>
+      <button><i class="fa fa-search"><a href="/pencarian/noun"></a></i></button>
     
   </form>
 

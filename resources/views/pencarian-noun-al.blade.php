@@ -8,7 +8,7 @@
   <form class="search" action="{{ action('nounAlController@searchnounal') }}" method="GET">
 
       <input type="text" placeholder="Search.." name="searchnounal">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button><i class="fa fa-search"><a href="/pencarian/noun/al"></a></i></button>
     
   </form>
 
@@ -18,7 +18,8 @@
 
   <div class="card">
     <div class="card-body">
-    @foreach($kata as $noun)
+
+        @foreach($kata as $noun)
         <tr>
             <td> <b> {{ $noun->kata_dasar_n}} </b> </td> </br>
             <td> {{ $noun->makna_dasar_n}} </td> </br>
@@ -38,15 +39,13 @@
         </div>
   </div>
 
-  </br>
-
   <div>
       <h6 class="comment">Tambahkan komentar</h6>
 
       <form action="{{ action('tambahKatanController@isi') }}" method="POST">
         @csrf
-        <textarea id="isi" rows="4" cols="50" placeholder="Masukkan komentar atau masukan" name="isi"> </textarea>
-        <button type="submit" class="btn btn-primary">Tambahkan</button>
+        <textarea class="form-control" id="isi" rows="3"placeholder="Masukkan komentar atau masukan" name="isi"></textarea>
+        <button class="btn btn-primary" type="submit" style="width:100%; margin-top:1%;">Tambahkan</button>
       </form> 
   </div>   
   

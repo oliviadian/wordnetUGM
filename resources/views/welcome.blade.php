@@ -302,71 +302,10 @@
                 font-weight: lighter;
             }
 
-            /* .dropdown {
-                float: left;
-                overflow: hidden;
-            }
-
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #ffff;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-
-            .dropdown-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            } */
-
         </style>
     </head>
 
     <body>
-
-        <!-- <header>
-
-            <div>
-
-                <ul>
-                    <li><img class="w" src="https://ugm.ac.id/images/optimasi/ugm_header.png"></li>
-                    <li class="teks">Wordnet UGM</li>
-                    <li><a href="/SeputarLaman">Seputar Laman</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pencarian
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Kata Benda</a>
-                            <a class="dropdown-item" href="#">Kata Kerja</a>
-                        </div>
-                    </li>
-                    <li><a href="/usersearch">Pencarian</li>
-                   
-                
-                    @if (Route::has('login'))
-                    <div class="top-right links">
-                        @auth
-                            <a href="{{ url('/home') }}">Home</a>
-                        @else
-                            <a href="{{ route('login') }}">Login</a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}">Register</a>
-                            @endif
-                        @endauth
-                    </div>
-                    @endif
-                </ul>
-            </div>
-            
-        </header> -->
 
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A2C43;">
             <!-- <a class="navbar-brand" href="/">Wordnet</a> -->
@@ -390,7 +329,7 @@
                         Pencarian
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/usersearch">Kata Benda</a>
+                        <a class="dropdown-item" href="/pencarian/noun">Kata Benda</a>
                         <a class="dropdown-item" href="/pencarian/verb">Kata Kerja</a>
                     </li>
 
@@ -416,9 +355,11 @@
             @yield('content')
         </div>
         
-        <footer>
-            <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
-        </footer>
+        <footer> 
+            <div class="container">
+                <p class="copyright"> © 2020 UNIVERSITAS GADJAH MADA</p>
+            </div>
+	    </footer>
 
     </body>
 </html>
