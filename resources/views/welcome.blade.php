@@ -35,8 +35,8 @@
                 margin: 0;
             }
 
-            .full-max-height {
-                height: 84vh;
+            .full-min-height {
+                height: 100vh;
             }
 
             .flex-center {
@@ -46,7 +46,7 @@
                 justify-items: center;
                 margin-bottom: 20px;
                 padding-top: 10%;
-                padding-bottom: 15%
+                /* padding-bottom: 15% */
             }
 
             .position-ref {
@@ -84,65 +84,6 @@
                 font-weight: 100;
             }
 
-           /* ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #1A2C43;
-                min-width: 100%;
-            } */
-
-            /* li {
-                float: left;
-                margin-left:2%;
-            }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 18px 16px;
-                text-decoration: none;
-            }
-
-            li a:hover {
-                background-color: #5DADE2;
-                color: white;
-                text-decoration: none;
-            }
-
-            li {
-                display: block;
-                transition-duration: 0.5s;
-            }
-
-            li:hover {
-                cursor: pointer;
-            }
-
-            ul li ul {
-                visibility: hidden;
-                opacity: 0;
-                position: absolute;
-                transition: all 0.5s ease;
-                margin-top: 1rem;
-                left: 0;
-                display: none;
-            }
-
-            ul li:hover > ul,
-            ul li ul:hover {
-                visibility: visible;
-                opacity: 1;
-                display: block;
-            }
-
-            ul li ul li {
-                clear: both;
-                width: 100%;
-            } */
-
             .w {
                 max-width:50px; 
                 max-height:55px;
@@ -167,7 +108,7 @@
 
             .tab{
                 padding-left: 6px;
-                padding-top: 8px;
+                padding-top: 10px;
             }
 
             .logo{
@@ -281,7 +222,7 @@
             .img-pos{
                 max-width:50%; 
                 max-height:55%;
-                padding-top: 6px;
+                padding-top: 15px;
                 margin-left: 15%;
                 margin-right: 2%;
                 margin-top: 10px;
@@ -355,11 +296,9 @@
             @yield('content')
         </div>
         
-        <footer> 
-            <div class="container">
-                <p class="copyright"> © 2020 UNIVERSITAS GADJAH MADA</p>
-            </div>
-	    </footer>
+        <!-- <footer> 
+                <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
+	    </footer> -->
 
     </body>
 </html>

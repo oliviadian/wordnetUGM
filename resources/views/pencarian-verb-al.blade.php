@@ -12,22 +12,22 @@
     
   </form>
 
-  @if ($kata)
+  @if($kata->count() > 0)
 
     <h6 class="comment">Hasil pencarian :</h6>
 
   <div class="card">
-    <div class="card-body">
+    <div class="card-body" style="font-family: -webkit-body;">
                 @foreach($kata as $verb)
 
                 <tr>
-                    <td> <b> {{ $verb->kata_dasar_v}} </b> </td> </br>
+                    <td> <li> {{ $verb->kata_dasar_v}} </li> </td>
                     <td> {{ $verb->makna_dasar_v}} </td> </br>
 
                 
                       @foreach($verb->hipernim as $hipernim)
 
-                      <td>{{$hipernim->hipernim_v}} </td></br>
+                      <td><li>{{$hipernim->hipernim_v}} </li></td>
                       <td>{{$hipernim->makna_hipernim_v}} </td>
 
                       @endforeach
@@ -48,12 +48,6 @@
         <button class="btn btn-primary" type="submit" style="width:100%; margin-top:1%;">Tambahkan</button>
       </form>
     </div>
-
-      <!-- <form action="{{ action('tambahKatavController@isi') }}" method="POST">
-        @csrf
-        <textarea id="isi" rows="4" cols="50" placeholder="Masukkan komentar atau masukan" name="isi"> </textarea>
-        <button type="submit" class="btn btn-primary">Tambahkan</button>
-      </form>  -->   
 
   @endif
 

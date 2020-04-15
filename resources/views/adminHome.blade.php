@@ -39,8 +39,8 @@
                 margin: 0;
             }
 
-            .full-max-height {
-                height: 84vh;
+            .full-min-height {
+                height: 100vh;
             }
 
             .flex-center {
@@ -88,34 +88,6 @@
                 font-family: "Times New Roman", Times, serif;
                 font-weight: 100;
             }
-
-           /* ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #1A2C43;
-                min-max-width: 100%;
-            }
-
-            li {
-                float: left;
-                margin-left:2%;
-            }
-
-            li a {
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding: 18px 16px;
-                text-decoration: none;
-            }
-
-            li a:hover {
-                background-color: #5DADE2;
-                color: white;
-                text-decoration: none;
-            } */
 
             .w {
                 max-width:50px; 
@@ -444,9 +416,9 @@
 
         </div>
 
-        <footer>
-            <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
-        </footer>
+        <!-- <footer> 
+                <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
+	    </footer> -->
         
     </body>
 </html>

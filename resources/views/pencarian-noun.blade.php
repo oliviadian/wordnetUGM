@@ -6,9 +6,9 @@
       <img class="img-pos" src="https://ugm.ac.id/images/optimasi/ugm_header.png">
       <h2 class="position">Wordnet UGM</h2>
        
-  <form class="search" action="{{ action('nounController@search') }}" method="GET">
+  <form class="search" action="{{ action('nounController@searchnoun') }}" method="GET">
 
-      <input type="text" placeholder="Search.." name="search">
+      <input type="text" placeholder="Search.." name="searchnoun">
       <button><i class="fa fa-search"><a href="/pencarian/noun"></a></i></button>
     
   </form>
@@ -18,11 +18,11 @@
     <h5 class="pencarian"><b>Hasil pencarian : </b></h5>
 
   <div class="card">
-    <div class="card-body">
+    <div class="card-body" style="font-family: -webkit-body;">
                 @foreach($details as $noun)
 
                     <tr>
-                        <td> <b> {{ $noun->kata_dasar_n}} </b> </td> </br>
+                        <td> <li>{{ $noun->kata_dasar_n}} </li> </td>
                         <td> {{ $noun->makna_dasar_n}} </td>
                         
                             

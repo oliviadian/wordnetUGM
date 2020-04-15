@@ -12,23 +12,23 @@
     
   </form>
 
-  @if ($kata)
+  @if($kata->count() > 0)
 
     <h6 class="comment">Hasil pencarian : </h6>
 
   <div class="card">
-    <div class="card-body">
+    <div class="card-body" style="font-family: -webkit-body;">
 
         @foreach($kata as $noun)
         <tr>
-            <td> <b> {{ $noun->kata_dasar_n}} </b> </td> </br>
+            <td> <li> {{ $noun->kata_dasar_n}} </li> </td>
             <td> {{ $noun->makna_dasar_n}} </td> </br>
 
          
           @foreach($noun->hipernim as $hipernim)
 
-            <td>{{$hipernim->hipernim_n}} </td></br>
-            <td>{{$hipernim->makna_hipernim_n}} </td>
+            <td> <li><b> {{$hipernim->hipernim_n}} </b></li></td>
+            <td> {{$hipernim->makna_hipernim_n}} </td>
 
           @endforeach
            
@@ -40,6 +40,7 @@
   </div>
 
   <div>
+ 
       <h6 class="comment">Tambahkan komentar</h6>
 
       <form action="{{ action('tambahKatanController@isi') }}" method="POST">
@@ -47,7 +48,10 @@
         <textarea class="form-control" id="isi" rows="3"placeholder="Masukkan komentar atau masukan" name="isi"></textarea>
         <button class="btn btn-primary" type="submit" style="width:100%; margin-top:1%;">Tambahkan</button>
       </form> 
-  </div>   
+    
+  </div>  
+
+ 
   
   @endif
             
