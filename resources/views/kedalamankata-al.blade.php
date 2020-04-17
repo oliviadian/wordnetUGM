@@ -1,22 +1,18 @@
 @extends('afterlogin')
 @section('content')
 
-<div>
-    <div class="teks2">
-        <b> Kedalaman Kata </b>
-    </div>
-
-    <div class="box-kk">
-        <form>
-                Kata 1   : <br>
-            <input class="input-kk" type="text" name="kata1" placeholder="kata1"><br>
-                Kata 2   : <br>
-            <input class="input-kk" type="text" name="kata2" placeholder="kata2">
-            <br>
-            <input class="tombol-kk" type="submit" value="Cari">
-        </form> 
-    </div>
-    </div>
+<div class="card" style="width: 25rem; margin:2%;">
+ 
+        <div class="card-body" style="padding:5%;">
+            <h5 class="card-title" style="margin-left:5%;">Kedalaman Kata</h5>
+                <div class="col-sm-8">          
+                    <input type="text" class="form-control" id="kata1" placeholder="kata1" name="kata1"></br>
+                    <input type="text" class="form-control" id="kata2" placeholder="kata2" name="kata2">
+                </div> </br>
+            
+            <a href="#" class="btn btn-primary" style="margin-left:5%;">Hitung</a>
+        </div>
+    
 </div>
 
 @endsection
