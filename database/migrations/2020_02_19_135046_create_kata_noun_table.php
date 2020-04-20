@@ -15,7 +15,7 @@ class CreateKataNounsTable extends Migration
     {
         Schema::create('kata_nouns', function (Blueprint $table) {
             $table->bigIncrements('id_kata_n');
-            $table->bigInteger('id_hipernim_n')->unsigned();
+            $table->bigInteger('id_noun')->unsigned();
             $table->string('kata_dasar_n');
             $table->string('makna_dasar_n');
             $table->timestamps();

@@ -15,7 +15,7 @@ class CreateHipernimNounsTable extends Migration
     {
         Schema::create('hipernim_nouns', function (Blueprint $table) {
             $table->bigIncrements('id_hipernim_n');
-            $table->integer('id_jarak_n')->unsigned();
+            $table->integer('id_kata_n')->unsigned();
             $table->string('hipernim_n');
             $table->string('makna_hipernim_n');
             $table->timestamps();

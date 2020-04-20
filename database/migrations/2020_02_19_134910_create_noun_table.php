@@ -16,7 +16,7 @@ class CreateNounsTable extends Migration
         Schema::create('nouns', function (Blueprint $table) {
             $table->bigIncrements('id_noun');
             $table->integer('id_kata_n')->unsigned();
-            $table->integer('id_user')->unsigned();
+            $table->integer('id')->unsigned();
             $table->string('kategori');
             $table->timestamps();
         });

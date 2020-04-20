@@ -15,8 +15,7 @@ class CreateKataVerbsTable extends Migration
     {
         Schema::create('kata_verbs', function (Blueprint $table) {
             $table->bigIncrements('id_kata_v');
-            $table->bigInteger('id_hipernim_v')->unsigned();
-            $table->integer('id_user')->unsigned();
+            $table->integer('id')->unsigned();
             $table->string('kata_dasar_v');
             $table->string('makna_dasar_v');
             $table->timestamps();

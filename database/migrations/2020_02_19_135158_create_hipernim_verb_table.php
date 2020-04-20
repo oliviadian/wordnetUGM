@@ -15,7 +15,7 @@ class CreateHipernimVerbsTable extends Migration
     {
         Schema::create('hipernim_verbs', function (Blueprint $table) {
             $table->bigIncrements('id_hipernim_v');
-            $table->integer('id_tambah_kata_v')->unsigned();
+            $table->integer('id_kata_v')->unsigned();
             $table->string('hipernim_v');
             $table->string('makna_hipernim_v');
             $table->timestamps();

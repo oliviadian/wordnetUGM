@@ -27,7 +27,6 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                color: #636b6f;
                 background-position: center;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -107,8 +106,10 @@
             }
 
             .tab{
+                position:absolute;
                 padding-left: 6px;
-                padding-top: 10px;
+                bottom:0;
+                /* padding-top: 10px; */
             }
 
             .logo{
@@ -122,6 +123,7 @@
                 padding: 1%;
                 border: 1px #1A2C43;
                 margin: 0;
+                margin-bottom: 2%;
                 background-color: #F1F1F1;
                 font-family: "Times New Roman", Times, serif;
                 color: black;
@@ -296,9 +298,9 @@
             @yield('content')
         </div>
         
-        <!-- <footer> 
+        <footer> 
                 <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
-	    </footer> -->
+	    </footer>
 
     </body>
 </html>

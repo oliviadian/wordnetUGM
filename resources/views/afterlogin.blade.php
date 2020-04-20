@@ -113,8 +113,9 @@
             }
 
             .tab{
+                position:absolute;
                 padding-left: 6px;
-                padding-top: 95px;
+                bottom:0;
             }
 
             .logo{
@@ -417,11 +418,9 @@
         
         </div>
 
-        <!-- <footer> 
-            <div class="footer-copyright text-center py-3" style="margin-bottom:0%">
-                © 2020 Copyright:
-            </div>
-	    </footer> -->
+        <footer> 
+                <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
+	    </footer>
         
     </body>
 </html>
