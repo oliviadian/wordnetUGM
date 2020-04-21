@@ -43,7 +43,7 @@
                 display: flex;
                 justify-content: center;
                 justify-items: center;
-                margin-bottom: 20px;
+                /* margin-bottom: 20px; */
                 padding-top: 10%;
                 /* padding-bottom: 15% */
             }
@@ -98,19 +98,21 @@
             }
 
             footer{
+                padding-top: 7%;
                 font-family: "Times New Roman", Times, serif;
-                /* background-color: #1A2C43; */
                 color: white;
                 font-size: 12px;
-                padding: 4px;
+                padding-left: 2%;
+                position:fixed;
+                bottom:0;
             }
 
-            .tab{
+            /* .tab{
                 position:absolute;
                 padding-left: 6px;
                 bottom:0;
                 /* padding-top: 10px; */
-            }
+            } */
 
             .logo{
                 max-width:200px; 
@@ -122,7 +124,7 @@
                 max-height: 68%;
                 padding: 1%;
                 border: 1px #1A2C43;
-                margin: 0;
+                margin: -30px;
                 margin-bottom: 2%;
                 background-color: #F1F1F1;
                 font-family: "Times New Roman", Times, serif;
@@ -156,7 +158,7 @@
                 font-size: 14px;
                 border: 1px solid grey;
                 float: left;
-                width: 70%;
+                width: 80%;
                 background: #f1f1f1;
                 border-top-left-radius: 25px;
                 border-bottom-left-radius: 25px;
@@ -231,12 +233,12 @@
                 float: left;
             }
 
-            .position{
+            .position {
                 color: #ffff;
                 font-family: "Times New Roman", Times, serif;
-                font-size: 50px;
-                padding: 4%;
-                padding-left: 17%;
+                font-size: 35px;
+                padding-left: 20%;
+                text-shadow: 2px 2px #1A2C43;
             }
 
             .pencarian{
@@ -251,8 +253,8 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A2C43;">
-            <!-- <a class="navbar-brand" href="/">Wordnet</a> -->
-            <a class="navbar-brand" href="/" style="font-family: Times New Roman">
+           
+            <a class="navbar-brand" href="/landingpage" style="font-family: Times New Roman">
                 <img src="https://ugm.ac.id/images/optimasi/ugm_header.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Wordnet UGM
             </a>
@@ -298,8 +300,8 @@
             @yield('content')
         </div>
         
-        <footer> 
-                <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
+        <footer class="footer"> 
+                <p> © 2020 UNIVERSITAS GADJAH MADA</p>
 	    </footer>
 
     </body>

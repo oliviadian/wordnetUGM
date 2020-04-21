@@ -3,7 +3,7 @@
 
 <div class="cari">
 
-      <h2 class="position">Pencarian Noun</h2>
+      <p class="position">Pencarian Kata Benda</p>
        
   <form class="search" action="{{ action('nounAlController@searchnounal') }}" method="GET">
 
@@ -21,14 +21,23 @@
 
         @foreach($kata as $noun)
         <tr>
-            <td> <li> {{ $noun->kata_dasar_n}} </li> </td>
+            <td> ➨ {{ $noun->kata_dasar_n}} </td> </br>
+
+          <div style="padding-left:4%;">
             <td> {{ $noun->makna_dasar_n}} </td> </br>
+          </div>
 
          
           @foreach($noun->hipernim as $hipernim)
 
-            <td> <li><b> {{$hipernim->hipernim_n}} </b></li></td>
-            <td> {{$hipernim->makna_hipernim_n}} </td>
+          &emsp;
+            <td> 
+                 ➥ {{$hipernim->hipernim_n}} 
+            </td> </br>
+
+          <div style="padding-left:7%;">
+            <td>  {{$hipernim->makna_hipernim_n}} </td>
+          </div>
 
           @endforeach
            

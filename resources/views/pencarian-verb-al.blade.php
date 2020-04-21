@@ -3,7 +3,7 @@
 
 <div class="cari">
 
-      <h2 class="position">Pencarian Verb</h2>
+      <p class="position">Pencarian Kata Kerja</p>
        
   <form class="search" action="{{ action('verbAlController@searchverbal') }}" method="GET">
 
@@ -18,19 +18,26 @@
 
   <div class="card">
     <div class="card-body" style="font-family: -webkit-body;">
+
                 @foreach($kata as $verb)
 
                 <tr>
-                    <td> <li> {{ $verb->kata_dasar_v}} </li> </td>
+                    <td> ➨ {{ $verb->kata_dasar_v}} </td> </br>
+                  
+                  <div style="padding-left:4%;">
                     <td> {{ $verb->makna_dasar_v}} </td> </br>
+                  </div>
 
-                
                       @foreach($verb->hipernim as $hipernim)
 
-                      <td><li>{{$hipernim->hipernim_v}} </li></td>
-                      <td>{{$hipernim->makna_hipernim_v}} </td>
+                      &emsp;
+                      <td> ➥ {{$hipernim->hipernim_v}} </td>
 
-                      @endforeach
+                  <div style="padding-left:7%;">
+                      <td>{{$hipernim->makna_hipernim_v}} </td>
+                  </div>
+
+                 @endforeach
                   
                 </tr>
 

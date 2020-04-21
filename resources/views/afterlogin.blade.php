@@ -48,7 +48,7 @@
                 display: contents;
                 justify-content: center;
                 justify-items: center;
-                margin-bottom: 20px;
+                /* margin-bottom: 20px; */
                 padding-top: 10%;
                 /* padding-bottom: 15% */
             }
@@ -103,20 +103,20 @@
             }
 
             footer {
-                padding-top: 5%;
+                padding-top: 7%;
                 font-family: "Times New Roman", Times, serif;
-                /* background-color: #1A2C43; */
                 color: white;
                 font-size: 12px;
-                /* padding: 4px; */
-                padding-top: 6%;
+                padding-left: 2%;
+                position:fixed;
+                bottom:0;
             }
 
-            .tab{
+            /* .tab{
                 position:absolute;
                 padding-left: 6px;
                 bottom:0;
-            }
+            } */
 
             .logo{
                 max-width:200px; 
@@ -239,13 +239,16 @@
                 float: left;
             }
 
-            .position{
+           
+            .position {
                 color: #ffff;
                 font-family: "Times New Roman", Times, serif;
-                font-size: x-large;
-                /* padding: 4%;
-                padding-left: 17%; */
+                font-size: 35px;
+                /* padding: 4%; */
+                padding-left: 17%;
+                text-shadow: 2px 2px #1A2C43;
             }
+            
 
             .vl {
                 border-left: 6px solid #A4B4BE;
@@ -261,7 +264,7 @@
                 margin: 10px 0;
                 color: #fff;
                 margin-left: 5%;
-                padding-top: 2%;
+                padding-top: 4%;
                 font-size: x-large;
             }
 
@@ -375,7 +378,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1A2C43;">
            
-            <a class="navbar-brand" href="/" style="font-family: Times New Roman">
+            <a class="navbar-brand" href="/landingpage" style="font-family: Times New Roman">
                 <img src="https://ugm.ac.id/images/optimasi/ugm_header.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Wordnet UGM
             </a>
@@ -418,8 +421,8 @@
         
         </div>
 
-        <footer> 
-                <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
+        <footer class="footer"> 
+                <p > © 2020 UNIVERSITAS GADJAH MADA</p>
 	    </footer>
         
     </body>

@@ -1,10 +1,10 @@
 @extends('welcome')
 @section('content')
 
-<div class="cari">
+<div class="cari" style="max-width:30%;">
 
-      <img class="img-pos" src="https://ugm.ac.id/images/optimasi/ugm_header.png">
-      <h2 class="position">Wordnet UGM</h2>
+     
+  <p class="position">Pencarian Kata Kerja</p>
        
   <form class="search" action="{{ action('verbController@searchverb') }}" method="GET">
 
@@ -22,8 +22,11 @@
                 @foreach($details as $verb)
 
                     <tr>
-                        <td> <li> {{ $verb->kata_dasar_v}} </li> </td>
+                        <td> ➨ {{ $verb->kata_dasar_v}} </td>
+
+                      <div style="padding-left:4%;">
                         <td> {{ $verb->makna_dasar_v}} </td>
+                      </div>
                         
                             
                       
@@ -33,4 +36,6 @@
             @endif
 
 </div>
+
+
 @endsection
