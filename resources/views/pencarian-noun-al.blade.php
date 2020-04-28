@@ -3,13 +3,19 @@
 
 <div class="cari">
 
-      <p class="position">Pencarian Kata Benda</p>
+  
+      <h3 style="color: #ffff; font-family: Times New Roman, Times, serif; text-shadow: 2px 2px #1A2C43;"> 
+      
+      Pencarian Kata Benda 
+      
+      </h3>
+  
        
   <form class="search" action="{{ action('nounAlController@searchnounal') }}" method="GET">
 
       <input type="text" placeholder="Search.." name="searchnounal">
       <button><i class="fa fa-search"><a href="/pencarian/noun/al"></a></i></button>
-    
+
   </form>
 
   @if($kata->count() > 0)

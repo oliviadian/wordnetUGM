@@ -3,7 +3,11 @@
 
 <div class="cari">
 
-      <p class="position">Pencarian Kata Kerja</p>
+    <h3 style="color: #ffff; font-family: Times New Roman, Times, serif; text-shadow: 2px 2px #1A2C43;"> 
+      
+      Pencarian Kata Kerja
+      
+      </h3>
        
   <form class="search" action="{{ action('verbAlController@searchverbal') }}" method="GET">
 

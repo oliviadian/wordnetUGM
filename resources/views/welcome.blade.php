@@ -103,7 +103,7 @@
                 color: white;
                 font-size: 12px;
                 padding-left: 2%;
-                position:fixed;
+                position:relative;
                 bottom:0;
             }
 
@@ -125,7 +125,7 @@
                 padding: 1%;
                 border: 1px #1A2C43;
                 margin: -30px;
-                margin-bottom: 2%;
+                margin-bottom: 10%;
                 background-color: #F1F1F1;
                 font-family: "Times New Roman", Times, serif;
                 color: black;
@@ -283,10 +283,11 @@
                         @auth
                             <a href="{{ url('/SeputarLaman/Al') }}">Home</a>
                         @else
-                            <a href="{{ route('login') }}">Login</a>
-
+                                <a href="{{ route('login') }}">Login</a>
+                                    
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}">Register</a>
+                                
                             @endif
                         @endauth
                     </div>
@@ -300,9 +301,9 @@
             @yield('content')
         </div>
         
-        <footer class="footer"> 
+        <!-- <footer class="footer"> 
                 <p> © 2020 UNIVERSITAS GADJAH MADA</p>
-	    </footer>
+	    </footer> -->
 
     </body>
 </html>

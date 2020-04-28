@@ -108,7 +108,7 @@
                 color: white;
                 font-size: 12px;
                 padding-left: 2%;
-                position:fixed;
+                position:relative;
                 bottom:0;
             }
 
@@ -135,6 +135,7 @@
                 font-size: 15px;
                 margin-left: 5%;
                 margin-top: 1%;
+                margin-bottom:10%;
                 box-shadow: 10px 10px #888888;
             }
 
@@ -154,9 +155,10 @@
             
             .cari {
                 padding: 5%;
-                max-width: 50%;
+                max-width: 60%;
                 margin-top: 5%;
-                margin-left: 25%;
+                margin-left: 20%;
+                margin-right: 20%;
             }
 
             form.search input[type=text] {
@@ -237,16 +239,6 @@
                 margin-left: 60px;
                 margin-top: 10px;
                 float: left;
-            }
-
-           
-            .position {
-                color: #ffff;
-                font-family: "Times New Roman", Times, serif;
-                font-size: 35px;
-                /* padding: 4%; */
-                padding-left: 17%;
-                text-shadow: 2px 2px #1A2C43;
             }
             
 
@@ -421,9 +413,9 @@
         
         </div>
 
-        <footer class="footer"> 
+        <!-- <footer class="footer"> 
                 <p > © 2020 UNIVERSITAS GADJAH MADA</p>
-	    </footer>
+	    </footer> -->
         
     </body>
 </html>
