@@ -31,22 +31,22 @@
                       <div style="padding-left:4%;">
                         <td> {{ $noun->makna_dasar_n}} </td>
                       </div>
-                        
+                 @endforeach     
                             
                       
         </div>
   </div>
 
-  @endforeach
-
   @else
 
-  <div class="card" style="max-width:100%; margin-top:2%;">
-          <div class="card-header bg-danger text-white"> </div>
+    <div class="card" style="max-width:100%; margin-top:2%;">
+
+          <div class="card-header bg-danger text-white"></div>
         
           <div class="card-body" style="font-size:90%;">
               Maaf kata yang anda cari belum terdapat di basis data kami.
           </div>
+
     </div>
 
   @endif

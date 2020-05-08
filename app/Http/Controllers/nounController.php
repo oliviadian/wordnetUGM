@@ -23,6 +23,6 @@ class nounController extends Controller
             return view('pencarian-noun')->withDetails($noun)->withQuery($kata);
         }
     }
-    return view('pencarian-noun')->withMessage("no data found");
+        return view('pencarian-noun')->withMessage("no data found");
     }
 }
