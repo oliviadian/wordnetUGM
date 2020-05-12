@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKataVerbsTable extends Migration
+class CreateKataVerbTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class CreateKataVerbsTable extends Migration
     {
         Schema::create('kata_verbs', function (Blueprint $table) {
             $table->bigIncrements('id_kata_v');
-            $table->integer('id')->unsigned();
+            $table->unsignedBigInteger('id');
             $table->string('kata_dasar_v');
             $table->string('makna_dasar_v');
             $table->timestamps();

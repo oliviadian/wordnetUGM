@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTambahKataVTable extends Migration
+class AddForeignKeyTambahKataN extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateTambahKataVTable extends Migration
      */
     public function up()
     {
-        Schema::create('tambah_kata_verbs', function (Blueprint $table) {
-            $table->bigIncrements('id_tambah_kata_v');
-            $table->unsignedBigInteger('id_hipernim_v');
-            $table->string('isi');
-            $table->timestamps();
+        Schema::table('tambah_kata_nouns', function (Blueprint $table) {
+            $table->foreign('id_hipernim_n')->references('id_hipernim_n')->on('hipernim_nouns')->onDelete('cascade');
         });
     }
 
@@ -28,6 +25,6 @@ class CreateTambahKataVTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tambah_kata_v');
+        //
     }
 }
