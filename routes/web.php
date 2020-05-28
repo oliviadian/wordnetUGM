@@ -39,9 +39,12 @@ Route::get('/admin/home/verb', 'HomeController@adminHomeV')->name('adminVerb')->
 // Route::get('/admin/home', 'halamanAdminController@lihatdata')->name('adminHome')->middleware('admin');
 
 
-Route::get('/Kedalaman/login', function () {
-    return view('kedalamankata-al');
+Route::get('/jarak/al', function () {
+    return view('jarakkata-al');
 });
+
+// Route::get('/jarak/al', 'jarakController@jarak')->name('carijarak');
+Route::post('/jarak/al', 'jarakController@jarak')->name('carijarak');
 
 Route::get('/logout', function () {
     return view('landingpage');

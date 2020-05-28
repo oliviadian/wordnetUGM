@@ -9,6 +9,6 @@ class tambah_kata_n extends Model
     public $table = "tambah_kata_nouns";
 
     protected $fillable = [
-        'id_tambah_kata_n', 'isi'
+        'id_tambah_kata_n', 'id_hipernim_n', 'isi'
     ];
 }

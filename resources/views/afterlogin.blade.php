@@ -395,7 +395,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/Kedalaman/login">Kedalaman Kata</a>
+                        <a class="nav-link" href="/jarak/al">Jarak Kata</a>
                     </li>
 
                

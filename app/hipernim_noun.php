@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class hipernim_noun extends Model
 {
     protected $fillable = [
-        'id_hipernim_n', 'id_kata_n','hipernim_n', 'makna_hipernim_n'
+        'id_hipernim_n', 'id_kata_n','hipernim_n', 'makna_hipernim_n', 'kedalaman_kata'
     ];
 
     public function kata(){

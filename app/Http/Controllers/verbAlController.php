@@ -19,13 +19,3 @@ class verbAlController extends Controller
     }
 }
 
- //     $kata = $request->input('searchverbal');
-
-    // if($kata){
-    //     $verb = kata_verb::where('kata_dasar_v', 'LIKE', '%' . $kata . '%')
-    //                     ->get();
-    //     if(count($verb) >0){
-    //         return view('pencarian-verb')->withDetails($verb)->withQuery($kata);
-    //     }
-    // }
-    // return view('pencarian-verb')->withMessage("no data found");
