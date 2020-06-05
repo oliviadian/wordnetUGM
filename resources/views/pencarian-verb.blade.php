@@ -23,32 +23,24 @@
   <div class="card">
     <div class="card-body" style="font-family: -webkit-body;">
                 @foreach($details as $verb)
-
                     <tr>
                         <td> ➨ {{ $verb->kata_dasar_v}} </td>
 
                       <div style="padding-left:4%;">
                         <td> {{ $verb->makna_dasar_v}} </td>
                       </div>
-                        
-                            
-                      
+                @endforeach       
         </div>
   </div>
-@endforeach
 
-@else
 
-  <div class="card" style="max-width:100%; margin-top:2%;">
-          <div class="card-header bg-danger text-white"> </div>
-        
-          <div class="card-body" style="font-size:90%;">
-              Maaf kata yang anda cari belum terdapat di basis data kami.
-          </div>
-    </div>
-@endif
+    @elseif ($message = Session::get('error'))
 
+      <div class="card" style="max-width:100%; margin-top:2%;">
+              <div class="card-header bg-danger text-white"> </div>
+            
+              <div class="card-body" style="font-size:90%;"> {{ $message }} </div>
+        </div>
+    @endif
 </div>
-
-
 @endsection

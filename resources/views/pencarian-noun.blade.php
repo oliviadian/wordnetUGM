@@ -8,7 +8,7 @@
       
       Pencarian Kata Benda
       
-      </h3>
+</h3>
        
   <form class="search" action="{{ action('nounController@searchnoun') }}" method="GET">
 
@@ -21,35 +21,26 @@
 
     <h5 class="pencarian"><b>Hasil pencarian : </b></h5>
 
-  <div class="card" >
-    <div class="card-body" style="font-family: -webkit-body;">
-                @foreach($details as $noun)
+      <div class="card" >
+        <div class="card-body" style="font-family: -webkit-body;">
+                    @foreach($details as $noun)
 
-                    <tr>
-                        <td> ➨ {{ $noun->kata_dasar_n}} </td>
+                        <tr>
+                            <td> ➨ {{ $noun->kata_dasar_n}} </td>
 
-                      <div style="padding-left:4%;">
-                        <td> {{ $noun->makna_dasar_n}} </td>
-                      </div>
-                 @endforeach     
-                            
-                      
-        </div>
-  </div>
-
-  @else
-
-    <div class="card" style="max-width:100%; margin-top:2%;">
-
-          <div class="card-header bg-danger text-white"></div>
-        
-          <div class="card-body" style="font-size:90%;">
-              Maaf kata yang anda cari belum terdapat di basis data kami.
+                          <div style="padding-left:4%;">
+                            <td> {{ $noun->makna_dasar_n}} </td>
+                          </div>
+                    @endforeach   
           </div>
-
-    </div>
-
-  @endif
-
+      </div>
+   
+      @elseif ($message = Session::get('error'))
+        <div class="card" style="max-width:100%; margin-top:2%;">
+          <div class="card-header bg-danger text-white"> </div>
+        
+          <div class="card-body" style="font-size:90%;"> {{ $message }} </div>
+      </div>
+    @endif
 </div>
 @endsection

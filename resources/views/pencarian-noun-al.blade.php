@@ -18,14 +18,14 @@
 
   </form>
 
-  @if($kata->count() > 0)
+  @if (isset($details))
 
     <h6 class="comment">Hasil pencarian : </h6>
 
   <div class="card">
     <div class="card-body" style="font-family: -webkit-body;">
 
-        @foreach($kata as $noun)
+      @foreach($details as $noun)
         <tr>
             <td> ➨ {{ $noun->kata_dasar_n}} </td> </br>
 
@@ -46,13 +46,13 @@
           </div>
 
           @endforeach
-           
-        </tr>
+          </tr>
 
-    @endforeach
+      @endforeach
                    
         </div>
   </div>
+
 
   <div>
  
@@ -66,18 +66,13 @@
     
   </div>  
 
-@else
+  @elseif ($message = Session::get('error'))
+        <div class="card" style="max-width:100%; margin-top:2%;">
+          <div class="card-header bg-danger text-white"> </div>
+        
+          <div class="card-body" style="font-size:90%;"> {{ $message }} </div>
+      </div>
 
-<div class="card" style="max-width:100%; margin-top:2%;">
-        <div class="card-header bg-danger text-white"> </div>
-      e
-        <div class="card-body" style="font-size:90%;">
-            Maaf kata yang anda cari belum terdapat di basis data kami.
-        </div>
-  </div>
-  
   @endif
-            
-
 </div>
 @endsection

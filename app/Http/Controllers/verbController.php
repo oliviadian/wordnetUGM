@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\kata_verb;
 
 class verbController extends Controller
@@ -18,10 +19,14 @@ class verbController extends Controller
     if($kata){
         $verb = kata_verb::where('kata_dasar_v', 'LIKE', '%' . $kata . '%')
                         ->get();
-        if(count($verb) >0){
-            return view('pencarian-verb')->withDetails($verb)->withQuery($kata);
-        }
-    }
-    return view('pencarian-verb')->withMessage("no data found");
+
+            if(count($verb) >0){
+                return view('pencarian-verb')->withDetails($verb)->withQuery($kata);
+            } else {
+                Session::flash('error','Maaf kata yang anda cari belum terdapat di basis data kami.');
+	            return view('pencarian-verb');
+            }
+
+        } return view('pencarian-verb');
     }
 }

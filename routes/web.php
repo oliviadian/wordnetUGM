@@ -56,11 +56,15 @@ Route::get('/logout', 'HomeController@logout')->name('logout');
 //     return view('pencarian');
 // });
 
+Route::get('/pencarian/noun', function () {
+    return view('pencarian-noun');
+});
+
 Route::get('/pencarian/noun', 'nounController@searchnoun')->name('carikata');
 
-// Route::get('/pencarian/verb', function () {
-//     return view('pencarian-verb');
-// });
+Route::get('/pencarian/verb', function () {
+    return view('pencarian-verb');
+});
 
 Route::get('/pencarian/verb', 'verbController@searchverb')->name('carikata');
 
