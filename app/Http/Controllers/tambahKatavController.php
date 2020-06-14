@@ -15,7 +15,6 @@ class tambahKatavController extends Controller
 			'isi' => $request->isi,
         ]);
         
-		
 		return redirect('/pencarian/verb/al');
  
 	}

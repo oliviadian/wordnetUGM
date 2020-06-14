@@ -36,14 +36,10 @@ Route::get('/admin/home', 'HomeController@admin')->name('adminHome')->middleware
 Route::get('/admin/home/noun', 'HomeController@adminHomeN')->name('adminNoun')->middleware('admin');
 Route::get('/admin/home/verb', 'HomeController@adminHomeV')->name('adminVerb')->middleware('admin');
 
-// Route::get('/admin/home', 'halamanAdminController@lihatdata')->name('adminHome')->middleware('admin');
-
-
 Route::get('/jarak/al', function () {
     return view('jarakkata-al');
 });
 
-// Route::get('/jarak/al', 'jarakController@jarak')->name('carijarak');
 Route::post('/jarak/al', 'jarakController@jarak')->name('carijarak');
 
 Route::get('/logout', function () {
@@ -51,10 +47,6 @@ Route::get('/logout', function () {
 });
 
 Route::get('/logout', 'HomeController@logout')->name('logout');
-
-// Route::get('/usersearch', function () {
-//     return view('pencarian');
-// });
 
 Route::get('/pencarian/noun', function () {
     return view('pencarian-noun');
@@ -85,4 +77,8 @@ Route::post('/pencarian/verb/al', 'tambahKatavController@isi')->name('isi');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+
+
+
+
 

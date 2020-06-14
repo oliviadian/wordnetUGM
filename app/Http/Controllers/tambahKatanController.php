@@ -14,7 +14,6 @@ class tambahKatanController extends Controller
 		DB::table('tambah_kata_nouns')->insert([
 			'isi' => $request->isi,
         ]);
-        
 		
 		return redirect('/pencarian/noun/al');
  

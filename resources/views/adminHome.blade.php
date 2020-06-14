@@ -417,9 +417,5 @@
 
         </div>
 
-        <footer> 
-                <p class="tab"> © 2020 UNIVERSITAS GADJAH MADA</p>
-	    </footer>
-        
     </body>
 </html>

@@ -112,12 +112,6 @@
                 bottom:0;
             }
 
-            /* .tab{
-                position:absolute;
-                padding-left: 6px;
-                bottom:0;
-            } */
-
             .logo{
                 max-width:200px; 
                 max-height:200px;
